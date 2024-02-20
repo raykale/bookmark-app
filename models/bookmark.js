@@ -8,6 +8,6 @@ const bookmarkSchema = new Schema ({
     timestamps: true
 })
 
-const Bookmark = model('Bookmark', todoSchema)
+const Bookmark = model('Bookmark', bookmarkSchema)
 
-module.exports = Bookmark
+module.exports = Bookmark;

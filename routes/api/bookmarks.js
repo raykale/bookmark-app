@@ -1,18 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const todoCtrl = require('../../controllers/api/todos')
+const bookmarkCtrl = require('../../controllers/api/bookmarks')
 
-// Index incomplete
-router.get('/', todoCtrl.indexNotComplete, todoCtrl.jsonTodos)
-// Index complete
-router.get('/completed', todoCtrl.indexComplete, todoCtrl.jsonTodos)
+// Index
+router.get('/bookmark', bookmarkCtrl.index, bookmarkCtrl.jsonBookmarks)
 // Delete
-router.delete('/:id', todoCtrl.destroy, todoCtrl.jsonTodo)
+router.delete('/:id', bookmarkCtrl.destroy, bookmarkCtrl.jsonBookmark)
 // Update
-router.put('/:id', todoCtrl.update, todoCtrl.jsonTodo)
+router.put('/:id', bookmarkCtrl.update, bookmarkCtrl.jsonBookmark)
 // Create
-router.post('/', todoCtrl.create, todoCtrl.jsonTodo)
+router.post('/', bookmarkCtrl.create, bookmarkCtrl.jsonBookmark)
 // Show
-router.get('/:id', todoCtrl.show, todoCtrl.jsonTodo)
+// router.get('/:id', bookmarkCtrl.show, bookmarkCtrl.jsonBookmark)
 
 module.exports = router

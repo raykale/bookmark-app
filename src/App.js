@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import Main from './pages/Main/Main'
 import New from './pages/New/New'
 import Websites from './pages/Websites/Websites'
-import Nav from './components/Nav/Nav'
+// import Nav from './components/Nav/Nav'
 
 
 export default function App(){
